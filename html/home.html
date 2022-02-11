@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>home</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<div id="app" data-state="0">
+		  <div class="ui-big-images">    
+		    <div class="ui-big-image" data-key="0">
+		      <img src="../img/turn2.png" alt=""/>
+		    </div>
+		    <div class="ui-big-image" data-key="1">
+             <img src="../img/turn3.png" alt="">
+		    </div>
+		    <div class="ui-big-image" data-key="2">
+             <img src="../img/turn4.png" alt="">
+           </div>
+		    <div class="ui-big-image" data-key="3">
+		     <img src="../img/turn5.png" alt="">
+		    </div>
+		    <div class="ui-big-image" data-key="4">
+		      <img src="../img/turn6.png" alt="">
+		    </div>
+		    <div class="ui-big-image" data-key="5">
+		     <img src="../img/turn1.png" alt="">
+		    </div>
+		  </div>
+		  <div class="ui-thumbnails">
+		    <div class="ui-thumbnail" tabindex="-1" data-key="0">
+                <img src="../img/turn2.png" alt=""/>
+                <div class="ui-cuticle" data-flip-key="cuticle"></div>
+		    </div>
+		    <div class="ui-thumbnail" tabindex="-1" data-key="1">
+                <img src="../img/turn3.png" alt="">
+                <div class="ui-cuticle" data-flip-key="cuticle"></div>
+		    </div>
+		    <div class="ui-thumbnail" tabindex="-1" data-key="2">
+                <img src="../img/turn4.png" alt="">
+                <div class="ui-cuticle" data-flip-key="cuticle"></div>
+		    </div>
+		    <div class="ui-thumbnail" tabindex="-1" data-key="3">
+                <img src="../img/turn5.png" alt="">
+                <div class="ui-cuticle" data-flip-key="cuticle"></div>
+		    </div>
+		    <div class="ui-thumbnail" tabindex="-1" data-key="4">
+                <img src="../img/turn6.png" alt="">
+                <div class="ui-cuticle" data-flip-key="cuticle"></div>
+		    </div>
+		    <div class="ui-thumbnail" tabindex="-1" data-key="5">
+                <img src="../img/turn1.png" alt="">
+                <div class="ui-cuticle" data-flip-key="cuticle"></div>
+		    </div>
+		  </div>
+		  <div class="ui-content">
+		    
+		    <nav class="ui-nav">
+		      <button id="prev" tabindex="-1" title="Previous">&lt;</button>
+		      <button id="next" tabindex="-1" title="Next">&gt;</button>
+		    </nav>
+		    
+		    <div class="ui-articles">
+		      <article class="ui-article" data-key="0">
+		        <h2 class="ui-heading">那一天</h2>
+		        <p class="ui-paragraph">小伙子，你很饿吗？我这里刚好开了家店，要不要成为第一个员工啊？</p>
+		      </article>
+		      <article class="ui-article" data-key="1">
+		        <h2 class="ui-heading">所谓友人</h2>
+		        <p class="ui-paragraph">我一定会把你那爹给找回来的。他这一玩失踪啊......</p>
+		      </article>
+		      <article class="ui-article" data-key="2">
+		        <h2 class="ui-heading">不忍而为之</h2>
+		        <p class="ui-paragraph">“可不要期待我给你们帮上什么忙哦”</p>
+		      </article>
+		      <article class="ui-article" data-key="3">
+		        <h2 class="ui-heading">我有的，你有的</h2>
+		        <p class="ui-paragraph">喝喝茶，逛逛闲，看看后辈打打闹闹。 </p>
+		      </article>
+		      <article class="ui-article" data-key="4">
+		        <h2 class="ui-heading">美味</h2>
+		        <p class="ui-paragraph">什么是家人？那从来不应该是个问题呢。</p>
+		      </article>
+		      <article class="ui-article" data-key="5">
+		        <h2 class="ui-heading">“营业中”</h2>
+		        <p class="ui-paragraph">不让任何一个人感到孤独。</p>
+		      </article>
+		    </div>
+		  </div>
+		</div>
+	
+	<script src='./js/flipping.web.js'></script>
+	<script>
+		console.clear();
+
+		const elPrevButton = document.querySelector('#prev');
+		const elNextButton = document.querySelector('#next');
+		const flipping = new Flipping();
+
+		const elImages = Array.from(document.querySelectorAll('.ui-big-image'));
+		const elThumbnails = Array.from(document.querySelectorAll('.ui-thumbnail'));
+
+		let state = {
+		  photo: 0
+		};
+
+		function send(event) {
+		  // read cuticle positions
+		  flipping.read();
+		  
+		  const elActives = document.querySelectorAll('[data-active]');
+		  
+		  Array.from(elActives)
+		    .forEach(el => el.removeAttribute('data-active'));
+
+		  switch (event) {
+		    case 'PREV':
+		      state.photo--;
+		      // Math.max(state.photo - 1, 0);
+		      break;
+		    case 'NEXT':
+		      state.photo++;
+		      // Math.min(state.photo + 1, elImages.length - 1);
+		      break;
+		    default:
+		      state.photo = +event;
+		      break;
+		  }
+		  
+		  var len = elImages.length;
+		  // Loop Around
+		  //state.photo = ( ( state.photo % len) + len ) % len;
+		  state.photo = Math.max(0, Math.min( state.photo, len - 1) );
+
+		  Array.from(document.querySelectorAll(`[data-key="${state.photo}"]`))
+		    .forEach( el => {
+		    el.setAttribute('data-active', true);
+		  });
+		  
+		  // execute the FLIP animation
+		  flipping.flip();
+		}
+
+		elThumbnails.forEach( thumb => { 
+		  thumb.addEventListener('click', () => {
+		    send(thumb.dataset.key);
+		  });
+		});
+
+		elPrevButton.addEventListener('click', () => {
+		  send('PREV');
+		});
+
+		elNextButton.addEventListener('click', () => {
+		  send('NEXT');
+		});
+
+		send(0);
+	</script>
+</body>
+</html>
