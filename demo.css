@@ -1,0 +1,447 @@
+*{
+    margin: 0px;
+    padding: 0;
+}
+
+
+.bg{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.bg1{
+    
+   background-image: url("img/wallhaven-72rxqo.jpg");
+}
+
+.bg2{
+    
+    background-image: url("img/wallhaven-pkw6y3.jpg");
+}
+
+.bg3{
+   
+    background-image: url("img/wallhaven-y8vlyk_1580x720.png");
+}
+
+.bg4{
+    background-image: url("img/wallhaven-g75r7d_1580x720\ \(1\).png");
+}
+
+html,body{
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.full{
+
+   width:100%;
+
+   height:100%;
+
+}
+
+.headline{ 
+    position: absolute;
+    top: 24%;
+    left: 27%;
+    color:rgb(72,30,28);
+    font-family:Century Gothic;
+    font-size:3.7vw;
+    line-height: 130%;
+    text-align: center;
+}
+
+.read{
+height:4vw;
+width: 40%;
+text-decoration: none;
+text-align: center;
+line-height: 4vw;
+font-family:Microsoft YaHei;
+font-size:2vw;
+font-weight: 200%;
+background-color: #10aec2;
+opacity:0.75;
+color: black;
+border-radius: 50px;
+display:inline-block;
+margin-top: 34%;
+margin-left: 27.2%;
+margin-right: 27.2%;
+padding-left: 2.2vw;
+padding-right: 2.2vw;
+box-shadow: 0 3px 5px rgba(0,0,0,.2)
+} 
+
+a.re:hover {
+    background-color:aqua;
+    color:black;
+    } 
+    
+li a {
+        text-decoration: none;
+        color: black;
+}
+
+ul {
+    display:inline-block;
+	list-style: none;
+    position:relative;
+    font-family:Tahoma;
+    font-size: 1.6vw;		
+    top:20%;
+    left:3%;
+	width: 19.75%;
+    padding-left: 1%;
+    margin-left: -2%;
+    text-align: center;
+    line-height: 170%;
+}
+
+
+li div:first-child {
+    padding: 0.5vw 0 0 0.5vw;
+		width: 3.5vw;
+		height: 3.5vw;
+		border: solid 0.2vw #248067;
+		border-radius: 50%;
+		color: #248067;
+		transition: all 0.2s ease-in-out;
+}
+
+li div:last-child {
+		position: relative;
+		top: -3.5vw;
+		left: 5vw;
+		width: 8vw;
+}
+
+li:hover div:first-child {
+		width:15vw;
+        height:3.5vw;
+        border-radius: 50%;
+		text-align: left;
+		color: #248067;
+		background: #248067;
+}
+
+li:hover div:last-child {
+		color:honeydew;
+}
+
+a {
+        text-decoration: none;
+}
+
+.line{
+    border-left:1px #248067 solid;
+} 
+
+ul, li {
+        list-style: none;
+}
+
+.navbar ul {
+        display: flex;
+}
+
+.navbar a {
+        display: flex;
+        align-items: center;
+        padding: 0 2rem;
+        height: 3rem;
+        color: gray;
+}
+
+.navbar a:hover {
+        color: white;
+        background:#248067;
+}
+
+.float{
+    float:left;
+}
+
+.win{
+    display: inline-block;
+    width: 70.9%;
+    height: 100%;
+    background-color:rgba(98, 73, 65, 0.4);
+    font-family: Microsoft YaHei;
+}
+
+.border{
+    display: inline-block;
+    height: 93.6%;
+    margin-left: 85%;
+    margin-top: -29.8%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 3%;
+    font-size: 3.0vw;
+    font-family: YaHei;
+    font-weight:lighter;
+    background-color: rgba(8, 8, 8, 0.3);
+    color:white;
+}
+
+
+
+.avi{
+    display: inline-block;
+    width: 10%;
+    height:20%;
+    margin-left: -17%;
+    margin-right: 25%;
+    margin-top: 25%;
+    margin-bottom: -8%;
+    border-radius:50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.hei{
+    margin-top: 3%;
+}
+
+.tag1{
+    display: inline-block;
+    background-color:#248067 ;
+    width: 2.5%;
+    height: 2.4vw;
+}
+
+.tag2{
+    font-size: 1.5vw;
+    font-family: Microsoft YaHei;
+}
+
+.item{
+    display: inline-block;
+    width: 31%;
+    margin-left: 15%;
+    margin-top: 3%;
+}
+
+.itemname{
+ display: inline-block;
+ width: 26%;
+ height: 5vh;
+ line-height: 308%;
+ border-bottom:0.2vw #12a182 dotted;
+ text-align: left;
+ color: #c4d7d6;
+ font-size: 1.1vw;
+ font-family: SimHei;
+}
+
+a.hua{
+    text-decoration: none;
+}
+
+a.hua:link {
+    color: wheat;
+  }
+  
+  a:visited {
+    color:black;
+  }
+ 
+  a:hover {
+    color:cornflowerblue;
+  }
+
+.itemvalue{
+    display: inline-block;
+    width: 70%;
+    height: 5vh;
+    line-height: 308%;
+    border-bottom:3px #12a182 dotted;
+    text-align: right;
+    color: black;
+    font-size: 1.1vw;
+    font-family: SimHei;
+}
+
+.myimg{
+    display:inline-block;
+    background-image: url("img/wallhaven-nk82y1_500x300.png");
+    width: 21%;
+    height: 19vw;
+    background-repeat: no-repeat;
+    border-radius: 20%;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+.intro{
+    display: inline-block;
+    width: 60%;
+    margin-left: 4%;
+    text-indent: 2em;
+    letter-spacing:1%;
+    line-height: 120%;
+    padding: 2%;
+    border-radius: 10%;
+    font-size:1.2vw;
+    background-color: rgba(229, 223, 192, 0.2);
+}
+
+.music1{
+    display: inline-block;
+    width: 16.3vw;
+    height: 16.3vw;
+    border-radius: 10vw;
+    margin-top: 0%;
+    margin-left: 7%;
+    margin-right: 2%;
+}
+
+.music2{
+    display: inline-block;
+    width: 19.6vw;
+    margin-left: 4.5%;
+    margin-top: 2%;
+    margin-top: 2%;
+    text-align: center ;
+    color:aliceblue;
+}
+
+.m1{
+    background-image: url("img/wallhaven-9m9p1x_250x250.png");
+}
+
+.m2{
+    background-image: url("img/wallhaven-m9gky9_250x250.png");
+}
+
+.m3{
+    background-image: url("img/wallhaven-q2o25r_250x250.png");
+}
+
+.m4{
+    background-image: url("img/wallhaven-k7lqeq_300x300.png");
+}
+
+.m5{
+    background-image: url("img/wallhaven-3z2r23_300x300.png");
+}
+
+.m6{
+   background-image: url("img/wallhaven-wqdglr_350x350.png");
+}
+
+.book{
+    display: inline-block;
+    width: 21%;
+    height: 60%;
+    margin-left: 5.5%;
+    margin-right: 5.5%;
+    margin-top: 2%;
+    border-radius: 5%;
+    box-shadow:1px 2px 10px black;
+}
+
+.bname{
+    display: inline-block;
+    border-bottom: 0.1vw solid rgb(138, 153, 66);
+    width: 21%;
+    margin-left: 5.5%;
+    margin-right: 5.5%;
+    margin-top: 0.2%;
+    text-align: center;
+    font-size: 1.8vw;
+    line-height: 2.5vw;
+    color: white;
+    font-family: KaiTi_GB2312;
+}
+
+.bo1{
+    background-image: url("img/wallhaven-o36mq7_1280x720.png");
+}
+
+.bo2{
+    background-image: url("img/wallhaven-39xk69.jpg");
+}
+
+.bo3{
+    background-image: url("img/wallhaven-e76ge8_1600x900.png");
+}
+
+.win1{
+    display: inline-block;
+    float:right;
+    width: 70.9%;
+    height: 100%;
+    font-family: "YouYuan","Microsoft YaHei";
+    background-color: rgba(0,0,0,0.3);
+    text-indent: 2em;
+    margin-right: 8%;
+}
+
+.win2{
+    display: inline-block;
+    float:right;
+    width: 70.9%;
+    height: 100%;
+    font-family:"FZYaoti","Microsoft YaHei";
+    background-color: rgba(0,0,0,0.3);
+    text-align:center;
+    margin-right: 10%;
+}
+
+.win3{
+    display: inline-block;
+    width: 70.9%;
+    height: 100%;
+    background-color:rgba(98, 73, 65, 0.5);
+    font-family: Microsoft YaHei;
+    font-weight: 800;
+    font-size: 1.3em;
+    line-height: 1.3em;
+}
+
+.mur{
+    font-size: 1.3vw;
+    line-height: 200%;
+    color: white;
+    font-weight: 100;
+    text-align: center;
+}
+
+.Cx{
+    font-size: 1.6vw;
+    line-height: 400%;
+    color: white;
+    font-weight: 100;
+    text-align: center;
+}
+
+.moon{
+    font-size: 1.5vw;
+    line-height: 150%;
+    color: white;
+    font-weight: 100;
+}
+
+.ivy{
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 30%;
+    line-height: 3vw;
+    font-family: Century Gothic;
+    font-size: 2.2vw;
+    font-weight: normal;
+    color: rgb(3, 71, 64);
+    background-color:rgba(241, 241, 241, 0.2);
+}
